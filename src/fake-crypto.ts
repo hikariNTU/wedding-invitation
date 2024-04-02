@@ -50,9 +50,3 @@ function decrypt<T>(data: string): T {
 export function getData() {
   return decrypt<EncryptData>(encryptedData);
 }
-
-try {
-  import("./generate");
-} catch (e) {
-  //
-}
