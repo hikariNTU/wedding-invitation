@@ -6,7 +6,8 @@
   "author": "hikariNTU",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "fill-text": "sed '-i' '' '-e' 's/SHARE_PARAM_KEY/${SHARE_PARAM_KEY}/g' './public/wedding-event.ics'",
+    "build": "vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
