@@ -5,7 +5,7 @@ const data = getData();
 function App() {
   return (
     <div className="mx-auto max-w-screen-sm p-4 text-center text-stone-800">
-      <h1 className="mb-6 mt-8 text-2xl tracking-widest text-amber-800">
+      <h1 className="mb-6 mt-8 text-2xl font-semibold tracking-widest text-amber-800">
         {data.title}
       </h1>
       <p>
@@ -16,7 +16,7 @@ function App() {
         />
       </p>
       <h2
-        className="mb-2 mt-8 text-2xl font-semibold text-amber-800"
+        className="mb-2 mt-12 text-2xl font-semibold text-amber-800"
         id="時間"
         data-id="時間"
       >
@@ -25,59 +25,64 @@ function App() {
       <time dateTime={data.dateTime} className="mb-1 text-stone-700">
         {data.time}
       </time>
-      <ul className="my-2 flex flex-col items-center gap-2">
+      <ul className="mt-6 flex flex-col items-center gap-2">
         <li>
-          <span className="rounded-full bg-amber-700 px-3 py-0.5 text-neutral-100">
+          <div className="rounded-full bg-amber-700 px-3 py-0.5 text-sm text-neutral-100">
             11:30
-          </span>
-          <br></br>進場
+          </div>
+          進場
         </li>
         <li>
-          <span className="rounded-full bg-amber-700 px-3 py-0.5 text-neutral-100">
+          <div className="rounded-full bg-amber-700 px-3 py-0.5 text-sm text-neutral-100">
             11:50
-          </span>
-          <br></br>儀式開始
+          </div>
+          儀式開始
         </li>
         <li>
-          <span className="rounded-full bg-amber-700 px-3 py-0.5 text-neutral-100">
+          <div className="rounded-full bg-amber-700 px-3 py-0.5 text-sm text-neutral-100">
             14:30
-          </span>
-          <br></br>活動結束
+          </div>
+          活動結束
         </li>
       </ul>
       <h2
-        className="mb-2 mt-8 text-2xl font-semibold text-amber-800"
+        className="mb-2 mt-12 text-2xl font-semibold text-amber-800"
         id="地點"
         data-id="地點"
       >
         地點
       </h2>
-      <p className="text-stone-700">圓山聯誼會館 西餐廳</p>
+      <p className="text-stone-700">
+        圓山聯誼會館 西餐廳
+        <br />
+        <a
+          href="https://www.grand-hotel.org/TW/club/restaurant-detail.aspx?serno=10"
+          className="text-amber-600 underline underline-offset-2"
+        >
+          https://www.grand-hotel.org/TW/club/restaurant-detail.aspx?serno=10
+        </a>
+      </p>
       <div className="my-4 flex flex-col items-center rounded-xl bg-stone-50 p-4 pb-6 text-amber-700">
         <AlertIcon className="text-3xl text-amber-600" />
         <p className="">非圓山大飯店本館，聯誼會館位在游泳池池畔</p>
       </div>
       <h2
-        className="mb-2 mt-8 text-2xl font-semibold text-amber-800"
+        className="mb-2 mt-12 text-2xl font-semibold text-amber-800"
         id="用餐資訊"
         data-id="用餐資訊"
       >
         用餐資訊
       </h2>
       <p>西餐自助式</p>
-      <p>
-        備有酒水
-        <br />
-        若須駕車請勿飲酒
-      </p>
+      <p>備有酒水，若須駕車請勿飲酒</p>
       <h2
-        className="mb-2 mt-8 text-2xl font-semibold text-amber-800"
+        className="mb-2 mt-12 text-2xl font-semibold text-amber-800"
         id="交通資訊"
         data-id="交通資訊"
       >
         交通資訊
       </h2>
-      <h3 id="大眾運輸" className="mb-2 mt-4 text-amber-800" data-id="大眾運輸">
+      <h3 id="大眾運輸" className="mb-2 mt-4 text-xl" data-id="大眾運輸">
         大眾運輸
       </h3>
       <ol className="my-2 flex flex-col items-center gap-1">
@@ -110,7 +115,7 @@ function App() {
 
       <hr className="my-4 border-black/10" />
 
-      <h3 id="自行開車" className="mb-2 mt-4 text-amber-800" data-id="自行開車">
+      <h3 id="自行開車" className="mb-2 mt-4 text-xl" data-id="自行開車">
         自行開車
       </h3>
       <p>
@@ -134,7 +139,7 @@ function App() {
 
       <hr className="my-4 border-black/10" />
 
-      <h3 id="計程車" className="mb-2 mt-4 text-amber-800" data-id="計程車">
+      <h3 id="計程車" className="mb-2 mt-4 text-xl" data-id="計程車">
         計程車
       </h3>
       <p>
@@ -150,6 +155,7 @@ function App() {
         <CalendarIcon className="text-[32px]" />
         加入行事曆
       </a>
+      <hr className="my-4 border-black/10" />
     </div>
   );
 }
